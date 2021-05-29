@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 3.5)
 
-project(bulk_server)
+set(BUILD_NUMBER 0)
+project(bulk_server VERSION 9.0.${BUILD_NUMBER})
 
 find_package(Boost COMPONENTS system REQUIRED)
 find_package(Threads)
