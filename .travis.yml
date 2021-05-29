@@ -6,6 +6,15 @@ before_script:
 - sudo apt-get install -qq g++-5
 - sudo apt-get install -qq doxygen
 - sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-5 90
+
+addons:
+  apt:
+    sources:
+      - sourceline: 'ppa:mhier/libboost-latest'
+      - ubuntu-toolchain-r-test
+    packages:
+      - libboost1.74-dev
+      
 script:
 - mkdir build
 - cd build
